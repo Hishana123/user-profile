@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <center>
+    <title>Hishana Profile</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: #784242;
+            padding: 10px;
+        }
+
+        .navbar button {
+            background: #888b83;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin: 2px;
+            cursor: pointer;
+        }
+
+        .navbar button:hover {
+            background: orange;
+        }
+
+        /* Sections */
+        .section {
+            display: none;
+            padding: 20px;
+        }
+
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <button onclick="showSection('profile')">Profile</button>
+        <button onclick="showSection('skills')">Skills</button>
+        <button onclick="showSection('education')">Education</button>
+        <button onclick="showSection('contact')">Contact</button>
+    </div>
+
+    <!-- PROFILE -->
+    <div id="profile" class="section active">
+        <h2>Profile</h2>
+        <p><b>Name:</b> Hishana Nazhrin</p>
+        <p><b>Course:</b> B.Sc AI & ML</p>
+        <p><b>Location:</b> Nagercoil</p>
+    </div>
+
+    <!-- SKILLS -->
+    <div id="skills" class="section">
+        <h2>Skills</h2>
+        <p>HTML</p>
+        <p>Python</p>
+        <p>Java</p>
+    </div>
+
+    <!-- EDUCATION -->
+    <div id="education" class="section">
+        <h2>Education</h2>
+        <p>B.Sc AI & ML - NICHE University</p>
+    </div>
+
+    <!-- CONTACT -->
+    <div id="contact" class="section">
+        <h2>Contact</h2>
+        <p>Email: shananazhrin@gmail.com</p>
+    </div>
+
+    <!-- SCRIPT -->
+    <script>
+        function showSection(sectionId) {
+            let sections = document.querySelectorAll('.section');
+
+            sections.forEach(sec => {
+                sec.classList.remove('active');
+            });
+
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</center>
+</body>
+</html>
